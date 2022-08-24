@@ -67,8 +67,8 @@ function App() {
   return (
     
     <div className="App">      
-      <Row>
-        <Col>
+      <Row className='d-flex justify-content-between'>
+        <Col xl={2} >
           {
             cameras.data?.map(e=>{
               return <PeopleCounter key={e.uid} 
@@ -81,7 +81,7 @@ function App() {
           }
           
         </Col>
-        <Col>
+        <Col xs={1} xl={2}>
           {
             sensors.data?.map(e=>{              
               return <Row key={e.uid} > 

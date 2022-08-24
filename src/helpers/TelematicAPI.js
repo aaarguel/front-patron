@@ -10,7 +10,7 @@ class TelematicAPI{
         }
 
     }
-
+    
     getCameras(){
         return {
             url: this.url + this.routes.cameras,

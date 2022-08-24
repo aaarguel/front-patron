@@ -1,29 +1,47 @@
-import React from 'react';
-import { Card} from 'reactstrap'
+import React, { useEffect, useState } from 'react';
+import './PeopleCounter.scss'
 
 const PeopleCounter = ({id,name,count,isConnected,socket}) => {    
-    // const [countPeople, setCountPeople] = useState(count);
-    
-    // useEffect(() => {            
-    //     socket.on('sensormeasure:read', (payload) => {
-    //         console.log(payload);            
-    //     });        
+    const [colors, setColors] = useState([
+        { name: "red", color: "#f00" },
+        { name: "yellow", color: "#ff0" },
+        { name: "green", color: "#0f0" }
+    ]);
+    const [active, setActive] = useState(0);
 
-    
-    //     return () => {            
-    //       socket.off('sensormeasure:read');         
-    //     };
-    // }, [socket,count]);
-
-
+    useEffect(()=>{
+        if(count<=3 && count>=0){
+            setActive(2)
+        }else if(count<=7){
+            setActive(1)
+        }else{
+            setActive(0)
+        }
+    },[count])
     
     return (
-        <Card>        
-            <p>{name}</p>
-            {/* <p>{id}</p> */}
-            <p>Personas: {count}</p>
-            <p>Connected: { '' + isConnected }</p>            
-        </Card>
+        <div className='container-semaphore'>
+            <div className='semaphore-title'>
+                <p>{name}</p>
+            </div>
+            <section className="semaphore">
+                {colors.map(({name, color}, index) => {
+                    const isActive = index === active;                    
+                    return (
+                        <button                    
+                            key={`${name}-${index}`}
+                            
+                            className={`${isActive ? "active" : ""}`}
+                            style={{
+                                backgroundColor: color,
+                                boxShadow: isActive ? `0 0 20px 4px ${color}` : "none"
+                            }}
+                        ></button>
+                    );
+                })}
+            </section>
+        </div>
+        
     )
 }
 

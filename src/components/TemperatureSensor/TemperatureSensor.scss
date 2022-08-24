@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+* {
+	font-family: 'Montserrat'
+}
+
+
+.center {	
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+	transform: translate(0%, 0%);
+	overflow: hidden;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin: 0.4rem;
+}
+
+.circle {
+	position: absolute;
+	width: 175px;
+	height: 175px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	box-shadow: inset 2px 2px 8px rgba(0,0,0, .4);
+	background: #26b021;
+	background: -moz-linear-gradient(left, #26b021 0%, #b70b0b 100%);
+	background: -webkit-gradient(
+		left top,
+		right top,
+		color-stop(0%, #26b021),
+		color-stop(100%, #b70b0b)
+	);
+	background: -webkit-linear-gradient(left, #26b021 0%, #b70b0b 100%);
+	background: -o-linear-gradient(left, #26b021 0%, #b70b0b 100%);
+	background: -ms-linear-gradient(left, #26b021 0%, #b70b0b 100%);
+	background: linear-gradient(to right, #26b021 0%, #b70b0b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr="#524cff",
+			endColorstr="#ff4805",
+			GradientType=1
+		);
+}
+
+.panel {
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 2px 2px 8px rgba(0,0,0,.2);
+}
+
+.marker-svg {
+	transform: rotate(10deg);
+	transition: all 1s ease-in-out;
+}
+
+.line {
+	stroke: transparent;
+	stroke-width: 2px;
+}
+
+.helper {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+	z-index: -1;
+}
+
+.panel > span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	text-align: center;
+	transform: translateX(-50%);
+}
+
+.maxmin {
+	top: 20px;
+	font-size: 14px;
+}
+
+.min {
+	color: blue;
+}
+
+.max {
+	color: red;
+}
+
+.temp {
+	top: 35%;
+	font-size: 26px
+}
+
+.location {
+	bottom: 25px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+
+.temperature{
+    top:35px;
+}
