@@ -2,7 +2,7 @@ class TelematicAPI{
     
     constructor(){
         //this.url = "http://200.126.14.228:8074"
-        this.url = "http://localhost:8075"
+        this.url = "http://200.126.14.228:8075"
         this.routes = {
             cameras : '/cameras',
             sensors : '/sensors',
