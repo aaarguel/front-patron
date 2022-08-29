@@ -7,7 +7,7 @@ const TemperatureSensor = ({id,name,temp,magnitude,isConnected,socket}) => {
     const [rotation, setRotation] = useState(0);
 
     useEffect(()=>{
-        const rotate = -25 + temp * 4.8;
+        const rotate = -250 + temp * 15.2;
         setRotation(rotate);
     },[temp])
     return (

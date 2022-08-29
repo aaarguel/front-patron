@@ -21,7 +21,7 @@ const PeopleCounter = ({id,name,count,isConnected,socket}) => {
     
     return (
         <div className='container-semaphore'>
-            <div className='semaphore-title'>
+            <div className='semaphore-title' style={{backgroundColor: `${count<=3 && count>=0? colors[2].color: count<=7 ? colors[1].color : colors[0].color }`, color:`#000` }}>
                 <p>{name}</p>
             </div>
             <section className="semaphore">
