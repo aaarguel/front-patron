@@ -3,9 +3,9 @@ import './PeopleCounter.scss'
 
 const PeopleCounter = ({id,name,count,isConnected,socket}) => {    
     const [colors, setColors] = useState([
-        { name: "red", color: "#f00" },
-        { name: "yellow", color: "#ff0" },
-        { name: "green", color: "#0f0" }
+        { name: "red", color: "red" },
+        { name: "yellow", color: "yellow" },
+        { name: "green", color: "#03ce03" }
     ]);
     const [active, setActive] = useState(0);
 
@@ -29,8 +29,7 @@ const PeopleCounter = ({id,name,count,isConnected,socket}) => {
                     const isActive = index === active;                    
                     return (
                         <button                    
-                            key={`${name}-${index}`}
-                            
+                            key={`${name}-${index}`}                            
                             className={`${isActive ? "active" : ""}`}
                             style={{
                                 backgroundColor: color,

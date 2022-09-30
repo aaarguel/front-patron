@@ -17,6 +17,7 @@ function App() {
   const [cameras,setCamera] = useFetch(api.getCameras());
   const [sensors,setSensor] = useFetch(api.getSensors());
   const [isConnected, setIsConnected] = useState(socket.connected);
+  
 
   useEffect(() => {
     socket.on('connect', () => {
